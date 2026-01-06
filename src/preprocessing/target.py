@@ -1,0 +1,45 @@
+import pandas as pd
+from schema import NSL_KDD_COLUMNS
+
+TRAIN_PATH = "data/raw/KDDTrain+.txt"
+TEST_PATH  = "data/raw/KDDTest+.txt"
+
+# Load raw data
+df_train = pd.read_csv(TRAIN_PATH, header=None)
+df_test  = pd.read_csv(TEST_PATH, header=None)
+
+# Apply schema
+df_train.columns = NSL_KDD_COLUMNS
+df_test.columns  = NSL_KDD_COLUMNS
+
+# -----------------------------
+# STEP 1: Drop non-learning column
+# -----------------------------
+df_train.drop(columns=["difficulty_level"], inplace=True)
+df_test.drop(columns=["difficulty_level"], inplace=True)
+
+# -----------------------------
+# STEP 2: Create binary target
+# Numeric label variant:
+# 0  -> normal
+# >0 -> attack
+# -----------------------------
+df_train["attack"] = df_train["label"].apply(lambda x: 0 if x == 0 else 1)
+df_test["attack"]  = df_test["label"].apply(lambda x: 0 if x == 0 else 1)
+
+# Drop original label column
+df_train.drop(columns=["label"], inplace=True)
+df_test.drop(columns=["label"], inplace=True)
+
+# -----------------------------
+# VERIFICATION
+# -----------------------------
+print("=== TARGET DEFINED ===")
+print("Train shape:", df_train.shape)
+print("Test shape:", df_test.shape)
+
+print("\nAttack label distribution (train):")
+print(df_train["attack"].value_counts())
+
+print("\nSample rows:")
+print(df_train[["protocol_type", "service", "src_bytes", "attack"]].head())

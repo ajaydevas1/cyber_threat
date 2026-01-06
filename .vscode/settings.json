@@ -1,0 +1,16 @@
+{
+    "python.defaultInterpreterPath": "venv/bin/python",
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "jupyter.askForKernelRestart": false,
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true
+    },
+    // Notebook + script integration
+    "python.analysis.autoImportCompletions": true
+}
