@@ -1,8 +1,8 @@
 import pandas as pd
 from schema import NSL_KDD_COLUMNS
 
-TRAIN_PATH = "data/raw/KDDTrain+.txt"
-TEST_PATH  = "data/raw/KDDTest+.txt"
+TRAIN_PATH = "KDD_Train_Dataset"
+TEST_PATH  = "KDD_Test_Dataset"
 
 # Load raw data
 df_train = pd.read_csv(TRAIN_PATH, header=None)
