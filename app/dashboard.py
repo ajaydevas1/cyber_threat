@@ -6,7 +6,7 @@ st.title("Hybrid Cyber Threat Detection System")
 st.markdown("### Model Outputs")
 
 # Load precomputed results
-final_df = pd.read_csv(r"C:\Users\Ajay\cyber_threat\data\processed\final_threat_assessment.csv")
+final_df = pd.read_csv(r"load_Processed_data")
 
 index = st.slider(
     "Select sample index",
