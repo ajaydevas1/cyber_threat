@@ -1,8 +1,8 @@
 import pandas as pd
 from regex import T
 
-TRAIN_PATH = "data/raw/KDDtrain+.txt"
-TEST_PATH = "data/raw/KDDtest+.txt"
+TRAIN_PATH = "KDD_Train_Dataset"
+TEST_PATH = "KDD_Test_Dataset"
 
 df_train = pd.read_csv(TRAIN_PATH, header=None)
 df_test = pd.read_csv(TEST_PATH, header=None)
