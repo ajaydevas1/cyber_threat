@@ -1,0 +1,11 @@
+numpy
+pandas
+scikit-learn
+tensorflow
+keras
+nltk
+spacy
+fuzzywuzzy
+scikit-fuzzy
+matplotlib
+seaborn
