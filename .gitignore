@@ -3,4 +3,4 @@ data/processed/
 # Python
 __pycache__/
 venv/
-*.csv
+*.csv.env
