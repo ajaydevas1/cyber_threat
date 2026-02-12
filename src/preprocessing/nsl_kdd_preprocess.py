@@ -19,8 +19,8 @@ NSL_KDD_COLUMNS = [
 ]
 
 
-train_path = "data/raw/KDDTrain+.txt"  #C:\Users\Ajay\cyber_threat_detection\data\raw\KDDTrain+.txt
-test_path = "data/raw/KDDTest+.txt"
+train_path = "KDD_Train_Dataset"  
+test_path = "KDD_Test_Dataset"
 
 df_train = pd.read_csv(train_path, header=None)
 df_test = pd.read_csv(test_path, header=None)

@@ -2,8 +2,8 @@ import pandas as pd
 from sklearn.svm import SVC
 
 # Load scaled data
-train_df = pd.read_csv("data/processed/nsl_kdd_train_scaled.csv")
-test_df  = pd.read_csv("data/processed/nsl_kdd_test_scaled.csv")
+train_df = pd.read_csv("processed_nsl_kdd_train_scaled_dataset") #Obtain the processed dataset by running python code
+test_df  = pd.read_csv("processed_nsl_kdd_test_scaled_dataset") #Obtain the processed dataset by running python code
 
 # Split features and target
 X_train = train_df.drop(columns=["attack"])

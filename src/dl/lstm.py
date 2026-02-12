@@ -6,7 +6,7 @@ from tensorflow.keras.layers import LSTM, Dense
 from tensorflow.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 
-df = pd.read_csv(r'C:\Users\Ajay\cyber_threat\data\processed\nsl_kdd_train_scaled.csv')
+df = pd.read_csv(r'processed_nsl_kdd_train_scaled_dataset')
 
 X = df.drop(columns=['attack']).values
 y = df['attack'].values

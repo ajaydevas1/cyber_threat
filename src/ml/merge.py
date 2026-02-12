@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Load existing ML scores
-knn_df = pd.read_csv(r"C:\Users\Ajay\cyber_threat\data\processed\knn_anomaly_scores.csv")
-svm_df = pd.read_csv(r"C:\Users\Ajay\cyber_threat\data\processed\svm_risk_scores.csv")
+knn_df = pd.read_csv(r"processed_knn_anomaly_scores_dataset") #Obtain the processed dataset by running python code
+svm_df = pd.read_csv(r"processed_svm_risk_scores_dataset") #Obtain the processed dataset by running python code 
 
 # Basic sanity check
 if len(knn_df) != len(svm_df):

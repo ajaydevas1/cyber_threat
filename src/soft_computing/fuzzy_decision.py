@@ -41,9 +41,9 @@ threat_sim = ctrl.ControlSystemSimulation(threat_ctrl)
 # -----------------------------
 # STEP 4: Load scores (example merge)
 # -----------------------------
-ml_df = pd.read_csv(r"C:\Users\Ajay\cyber_threat\data\processed\ml_combined_risk_score.csv")
-text_df = pd.read_csv(r"C:\Users\Ajay\cyber_threat\data\processed\text_threat_scores.csv")
-seq_df = pd.read_csv(r"C:\Users\Ajay\cyber_threat\data\processed\lstm_sequence_risk_scores.csv")
+ml_df = pd.read_csv(r"processed_ml_combined_risk_score_dataset")# By pre_processing all the Python code you will obtain dataset
+text_df = pd.read_csv(r"processed_text_threat_scores_dataset")
+seq_df = pd.read_csv(r"processed_lstm_sequence_risk_scores_dataset")
 
 # Align length safely (demo purpose)
 min_len = min(len(ml_df), len(text_df), len(seq_df))

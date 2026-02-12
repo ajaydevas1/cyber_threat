@@ -3,7 +3,7 @@ import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
-df = pd.read_csv(r'C:\Users\Ajay\cyber_threat\data\raw\SMSSpamCollection', 
+df = pd.read_csv(r'Raw_SMSSpamCollection_Dataset', 
                    sep='\t', 
                    header=None, 
                    names=['label', 'text'])

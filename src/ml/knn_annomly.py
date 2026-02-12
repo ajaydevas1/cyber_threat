@@ -1,8 +1,8 @@
 import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
 
-train_df = pd.read_csv(r'C:\cyber_threat\cyber_threat_detection\data\processed\nsl_kdd_train_scaled.csv')
-test_df = pd.read_csv(r'C:\cyber_threat\cyber_threat_detection\data\processed\nsl_kdd_test_scaled.csv')
+train_df = pd.read_csv(r'processed_nsl_kdd_train_scaled_dataset') # Obtain the processed dataset by running python code 
+test_df = pd.read_csv(r'processed_nsl_kdd_test_scaled_dataset') # Obtain the processed dataset by running python code 
 
 X_train = train_df.drop(columns=['attack'])
 y_train = train_df['attack']
